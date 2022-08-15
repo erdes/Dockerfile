@@ -1,0 +1,11 @@
+# Environment for CTF
+
+FROM ubuntu:latest
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update \ 
+&& apt-get install -y tzdata \
+&& apt-get install -y clang clang-12 \ 
+&& apt-get install -y neovim git wget curl imagemagick wireshark tshark unzip gdb net-tools
+
